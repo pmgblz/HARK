@@ -494,7 +494,7 @@ def calcStationaryAgeDstn(LivPrb,terminal_period):
     AgeDstn = (x/np.sum(x))
     return AgeDstn
     
-
+'''
 # Set targets for K/Y and the Lorenz curve based on the data
 if Params.do_liquid:
     lorenz_target = np.array([0.0, 0.004, 0.025,0.117])
@@ -609,4 +609,4 @@ if Params.run_estimation:
     EstimationEconomy.center_estimate = center_estimate
     EstimationEconomy.spread_estimate = spread_estimate
     EstimationEconomy.showManyStats(Params.spec_name)
-        
+    '''  
