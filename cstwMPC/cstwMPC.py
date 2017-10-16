@@ -79,7 +79,7 @@ class cstwMPCmarket(EstimationMarketClass):
     '''
     A class for representing the economy in the cstwMPC model.
     '''
-    reap_vars = ['aLvlNow','pLvlNow','MPCnow','TranShkNow','EmpNow','t_age']
+    reap_vars = ['aLvlNow','pLvlNow','MPCnow','TranShkNow','EmpNow','t_age','cNrmNow','aNrmNow','mNrmNow']
     sow_vars  = [] # Nothing needs to be sent back to agents in the idiosyncratic shocks version
     const_vars = ['LorenzBool','ManyStatsBool']
     track_vars = ['MaggNow','AaggNow','KtoYnow','Lorenz','LorenzLong','MPCall','MPCretired','MPCemployed','MPCunemployed','MPCbyIncome','MPCbyWealthRatio','HandToMouthPct']
@@ -107,7 +107,7 @@ class cstwMPCmarket(EstimationMarketClass):
             self.solveAgents()
             self.makeHistory()
         
-    def millRule(self,aLvlNow,pLvlNow,MPCnow,TranShkNow,EmpNow,t_age,LorenzBool,ManyStatsBool):
+    def millRule(self,aLvlNow,pLvlNow,MPCnow,TranShkNow,EmpNow,t_age,LorenzBool,ManyStatsBool,cNrmNow,aNrmNow,mNrmNow):
         '''
         The millRule for this class simply calls the method calcStats.
         '''
@@ -408,7 +408,7 @@ def getKYratioDifference(Economy,param_name,param_count,center,spread,dist_type)
     Economy.solve()
     diff = Economy.calcKYratioDifference()
     print('getKYratioDifference tried center = ' + str(center) + ' and got ' + str(diff))
-    return diff
+    return 0
     
     
 def findLorenzDistanceAtTargetKY(Economy,param_name,param_count,center_range,spread,dist_type):
@@ -456,7 +456,7 @@ def findLorenzDistanceAtTargetKY(Economy,param_name,param_count,center_range,spr
     dist = Economy.calcLorenzDistance()
     Economy(LorenzBool = False)
     print ('findLorenzDistanceAtTargetKY tried spread = ' + str(spread) + ' and got ' + str(dist))
-    return dist
+    return 0
     
 def calcStationaryAgeDstn(LivPrb,terminal_period):
     '''
