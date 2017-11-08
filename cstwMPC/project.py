@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath('../')) #Path to ConsumptionSaving folder
 sys.path.insert(0, os.path.abspath('../../'))
 sys.path.insert(0, os.path.abspath('../../cstwMPC')) #Path to cstwMPC folder
 
-import SetupParamsCSTW as Params
+import SetupParamsCSTWDerin as Params
 from copy import deepcopy
 from scipy.optimize import golden, brentq
 from time import clock
