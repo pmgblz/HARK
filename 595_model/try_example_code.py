@@ -73,6 +73,9 @@ if do_simulation:
 ###############################################################################
 # CREATE OWN CONSUMER TYPE - FOLLOWING P.15 OF THE HANDBOOK  
 ###############################################################################
+    
+# Added example consumer     
+    
 print('Plotting Consumer Example:')
     
 MyConsumer = PerfForesightConsumerType(time_flow=True, cycles=1,
