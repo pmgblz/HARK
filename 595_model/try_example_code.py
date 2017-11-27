@@ -6,7 +6,8 @@ I'm not sure how to implement the model we are currently running.
 
 # CHANGE PATH - WORKING DIRECTORY
 # select your path
-path = "C:/Users/Paula Gablenz/Dropbox/000_RA/GitHub/HARK/ConsumptionSaving"
+# path = "C:/Users/Paula Gablenz/Dropbox/000_RA/GitHub/HARK/ConsumptionSaving"
+path = "E:\Dropbox\GitHub\HARK-Paula\ConsumptionSaving"
 
 import os
 retval = os.getcwd()
